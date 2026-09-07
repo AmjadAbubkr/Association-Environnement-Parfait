@@ -31,11 +31,11 @@ import { Route, Switch, useLocation, Router as WouterRouter } from 'wouter';
 const queryClient = new QueryClient();
 
 const photos = {
-  hero: 'https://images.pexels.com/photos/623171/pexels-photo-623171.jpeg?auto=compress&cs=tinysrgb&w=1800',
-  people: 'https://images.pexels.com/photos/7658760/pexels-photo-7658760.jpeg?auto=compress&cs=tinysrgb&w=1200',
-  trees: 'https://images.pexels.com/photos/1072824/pexels-photo-1072824.jpeg?auto=compress&cs=tinysrgb&w=1200',
-  hands: 'https://images.pexels.com/photos/259280/pexels-photo-259280.jpeg?auto=compress&cs=tinysrgb&w=1200',
-  canopy: 'https://images.pexels.com/photos/1671325/pexels-photo-1671325.jpeg?auto=compress&cs=tinysrgb&w=1800',
+  hero: '/aep-community-cleanup.jpg',
+  people: '/aep-team.jpg',
+  trees: '/aep-tree-planting.jpg',
+  hands: '/aep-awareness.jpg',
+  canopy: '/aep-cleanup.jpg',
 };
 
 const navItems = [
@@ -160,7 +160,7 @@ function AppShell() {
           <div className="relative min-h-[580px] overflow-hidden bg-[#214b30] md:min-h-[680px]">
             <img
               src={photos.hero}
-              alt="Lumière traversant un feuillage dense, symbole d'un avenir vivant au Tchad"
+              alt="Des volontaires de l'AEP mobilisés pour nettoyer un quartier à N'Djamena"
               className="absolute inset-0 size-full object-cover object-center opacity-70"
             />
             <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(12,37,20,.82),rgba(12,37,20,.18)_75%)]" />
@@ -210,9 +210,9 @@ function AppShell() {
             </p>
           </div>
           <div className="mt-12 grid gap-4 md:grid-cols-[.9fr_1.18fr_.9fr]">
-            <ActionCard image={photos.people} number="01" icon={Users} title="Mobiliser" text="Sensibiliser les communautés et faire de l’environnement une responsabilité partagée." />
-            <ActionCard image={photos.trees} number="02" icon={TreePine} title="Régénérer" text="Planter, reboiser et prendre soin des espaces qui rendent nos villes plus vivables." featured />
-            <ActionCard image={photos.hands} number="03" icon={HandHeart} title="Prendre soin" text="Associer l’action environnementale à l’appui social et humanitaire." />
+            <ActionCard image={photos.people} alt="Des membres de l'AEP réunis en tenue associative" number="01" icon={Users} title="Mobiliser" text="Sensibiliser les communautés et faire de l’environnement une responsabilité partagée." />
+            <ActionCard image={photos.trees} alt="Des membres de l'AEP plantant un jeune arbre avec la communauté" number="02" icon={TreePine} title="Régénérer" text="Planter, reboiser et prendre soin des espaces qui rendent nos villes plus vivables." featured />
+            <ActionCard image={photos.hands} alt="Un membre de l'AEP sensibilisant au choléra dans un marché" number="03" icon={HandHeart} title="Prendre soin" text="Associer l’action environnementale à l’appui social et humanitaire." />
           </div>
         </section>
 
@@ -230,7 +230,7 @@ function AppShell() {
               </div>
               <div className="relative lg:pt-14">
                 <div className="relative h-[420px] overflow-hidden bg-[#315d3b] md:h-[530px]">
-                  <img src={photos.people} alt="Des personnes réunies pour une action collective en plein air" className="img-zoom size-full object-cover" />
+                   <img src={photos.people} alt="Des membres de l'AEP réunis pour une action collective" className="img-zoom size-full object-cover" />
                   <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(16,44,24,.4),transparent_55%)]" />
                   <span className="absolute bottom-5 left-5 eyebrow text-[#edf4e8]">L’humain au centre</span>
                 </div>
@@ -268,7 +268,7 @@ function AppShell() {
 
         <section className="container-aep">
           <div className="relative min-h-[500px] overflow-hidden bg-[#193d26] md:min-h-[610px]">
-            <img src={photos.canopy} alt="Canopée lumineuse et dense vue depuis le sol" className="absolute inset-0 size-full object-cover opacity-60" />
+            <img src={photos.canopy} alt="Une équipe de l'AEP participant à une activité de salubrité" className="absolute inset-0 size-full object-cover opacity-60" />
             <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(12,35,20,.9),rgba(12,35,20,.15))]" />
             <div className="relative flex min-h-[500px] items-end p-7 md:min-h-[610px] md:p-14 lg:p-20">
               <div className="max-w-[720px] text-[#fbfaf6]">
@@ -374,10 +374,10 @@ function AppShell() {
   );
 }
 
-function ActionCard({ image, number, icon: Icon, title, text, featured = false }: { image: string; number: string; icon: IconType; title: string; text: string; featured?: boolean }) {
+function ActionCard({ image, alt, number, icon: Icon, title, text, featured = false }: { image: string; alt: string; number: string; icon: IconType; title: string; text: string; featured?: boolean }) {
   return (
     <article className={`group relative min-h-[430px] overflow-hidden bg-[#315d3b] ${featured ? 'md:min-h-[500px]' : ''}`} data-testid={`card-action-${number}`}>
-      <img src={image} alt="" aria-hidden="true" className="img-zoom absolute inset-0 size-full object-cover opacity-80" />
+      <img src={image} alt={alt} className="img-zoom absolute inset-0 size-full object-cover opacity-80" />
       <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(15,43,23,.9),rgba(15,43,23,.05)_68%)]" />
       <div className="relative flex min-h-[430px] flex-col justify-between p-6 text-[#fbfaf6] md:min-h-[500px] md:p-8">
         <span className="eyebrow text-[#e2b16d]">{number}</span>
