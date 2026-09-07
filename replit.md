@@ -1,6 +1,6 @@
-# [Project name]
+# Association Environnement Parfait
 
-_Replace the heading above with the project's name, and this line with one sentence describing what this app does for users._
+Site vitrine officiel de l'Association Environnement Parfait (AEP), une association tchadienne engagée pour un environnement sain, la résilience climatique et la solidarité.
 
 ## Run & Operate
 
@@ -22,15 +22,21 @@ _Replace the heading above with the project's name, and this line with one sente
 
 ## Where things live
 
-_Populate as you build — short repo map plus pointers to the source-of-truth file for DB schema, API contracts, theme files, etc._
+- `artifacts/aep-website/src/App.tsx` — page institutionnelle, navigation, sections et interactions locales
+- `artifacts/aep-website/src/index.css` — tokens visuels, typographie, responsive et animations
+- `artifacts/aep-website/public/aep-logo.jpg` — logo officiel fourni par l'association
+- `artifacts/aep-website/index.html` — métadonnées SEO et chargement des polices
 
 ## Architecture decisions
 
-_Populate as you build — non-obvious choices a reader couldn't infer from the code (3-5 bullets)._
+- Le site est une page vitrine frontend-only : les CTA utilisent des ancres et un lien e-mail plutôt qu'un backend fictif.
+- Les contenus sont issus du profil institutionnel AEP ; aucun chiffre d'impact non fourni n'est affiché.
+- La direction visuelle privilégie le récit éditorial, les photographies de nature et une palette forêt/ivoire/ocre inspirée du logo.
+- Les informations de contact et d'inscription à la newsletter sont présentées avec un retour d'interface local, prêtes à être reliées à un service ultérieurement.
 
 ## Product
 
-_Describe the high-level user-facing capabilities of this app once they exist._
+La page présente l'identité de l'AEP, sa mission, son historique, ses domaines d'intervention, ses partenaires et un parcours de prise de contact pour volontaires et organisations.
 
 ## User preferences
 
