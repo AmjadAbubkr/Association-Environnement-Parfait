@@ -41,7 +41,7 @@ const base = import.meta.env.BASE_URL;
 const gal = (n: number) => `${base}galerie/galerie-${String(n).padStart(2, '0')}.jpg`;
 
 const CONTACT = {
-  email: 'aep235@gmail.com',
+  email: 'Aep00053@gmail.com',
   phones: ['+235 69 69 79 69', '+235 69 05 12 12'],
   city: 'N’Djamena, République du Tchad',
 };
@@ -201,7 +201,7 @@ const faqs = [
   },
   {
     q: 'Comment devenir volontaire ou partenaire ?',
-    a: 'Écrivez-nous à aep235@gmail.com ou appelez-nous au +235 69 69 79 69 / +235 69 05 12 12. L’association collabore déjà avec des associations de jeunes, des ONG, des institutions publiques et des collectivités locales, et reste ouverte à de nouveaux partenariats nationaux et internationaux.',
+    a: 'Écrivez-nous à Aep00053@gmail.com ou appelez-nous au +235 69 69 79 69 / +235 69 05 12 12. L’association collabore déjà avec des associations de jeunes, des ONG, des institutions publiques et des collectivités locales, et reste ouverte à de nouveaux partenariats nationaux et internationaux.',
   },
   {
     q: 'Qui bénéficie des actions de l’AEP ?',
